@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.chengxusheji.domain">
+
+	<class name="SurveyInfo" table="SurveyInfo">
+
+          <!-- 主键记录编号 -->
+          <id name="paperId" column="paperId">
+            <generator class="native"/>
+          </id>
+
+          <!-- 简单字符串属性: 问卷名称 -->
+          <property
+            name="questionPaperName"
+            column="questionPaperName"
+            type="string"
+            length="30"
+          />
+
+          <!-- 简单字符串属性: 发起人 -->
+          <property
+            name="faqiren"
+            column="faqiren"
+            type="string"
+            length="20"
+          />
+
+          <!-- 简单字符串属性: 问卷描述 -->
+          <property
+            name="description"
+            column="description"
+            type="string"
+            length="100"
+          />
+
+          <!-- 简单日期型属性: 发起日期 -->
+          <property
+            name="startDate"
+            column="startDate"
+            	type="timestamp"
+            	length="10"
+          />
+
+          <!-- 简单日期型属性: 结束日期 -->
+          <property
+            name="endDate"
+            column="endDate"
+            	type="timestamp"
+            	length="10"
+          />
+
+          <!-- 简单图片属性: 主题图片 -->
+          <property
+            name="zhutitupian"
+            column="zhutitupian"
+            type="string"
+            length="50"
+          />
+
+          <!-- 简单整型属性: 审核标志 -->
+          <property
+            name="publishFlag"
+            column="publishFlag"
+            type="int"
+
+          />
+
+
+		 
+		
+	</class>
+	
+</hibernate-mapping>
+ 
